@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Escola de Matemática</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <Access-Control-Allow-Origin "http://dominio.com">
+    <Access-Control-Allow-Credentials "true">
+    <Access-Control-Allow-Methods "GET, POST, PUT, DELETE">
+    <Access-Control-Allow-Headers "accept, authorization, content-type">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+   <body>
+     <h1>Bem-vindo à Escola de Matemática!</h1>
+     <p>Aqui você poderá satisfazer todas as suas necessidades de matemática e fins acadêmicos. Se você estiver procurando por cursos, tutorias, ferramentas de aprendizado, você encontrará tudo aqui!</p>
+    <h1>Let's plot random numbers</h1>
+    <div id="plot"></div>
+    <py-config>
+        packages = ["numpy", "matplotlib", "https://1drv.ms/u/s!Au94BMHE5aJ-oJE0ctzmwtx58EGFug?e=6Y1zW5"]
+    </py-config>
+    <py-script>
+
+      import matplotlib.pyplot as plt
+      import numpy as np
+
+      x = np.random.randn(1000)
+      y = np.random.randn(1000)
+      fig, ax = plt.subplots()
+      ax.scatter(x, y)
+      display(fig, target="plot")
+    </py-script>
+  </body>
+</html>
+
